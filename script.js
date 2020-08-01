@@ -82,10 +82,11 @@ function generatePassword() {
     var randomPW = [];
 
     for (var i=0; i < length; i++) {
-        var randomSelection = selections[Math.floor(math.random() * selections.length)];
-        randomPW.push(randomSelction);
+        var randomSelection = selections[Math.floor(Math.random() * selections.length)];
+        randomPW.push(randomSelection);
     }
     var passwordString = randomPW.join("");
+    return passwordString;
 
 }
 
