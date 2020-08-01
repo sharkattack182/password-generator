@@ -31,13 +31,13 @@ var numberOpts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 //Functions
 
 function generatePassword() {
-    lengthValue = prompt("Please select a password length between 8 and 128 characters.");
+    length = prompt("Please select a password length between 8 and 128 characters.");
 
-    if (!lengthValue) {
+    if (!length) {
         alert("Tis field is required");
-    } else if (lengthValue < 8 || lengthValue > 128) {
+    } else if (length < 8 || length > 128) {
         alert("Password must be between 8 and 128 characters");
-        lengthValue = prompt("Please select a password length between 8 and 128 characters.");
+        length = prompt("Please select a password length between 8 and 128 characters.");
     } else {
         upperYN = confirm("Do you want password to include uppercase letters?");
         lowerYN = confirm("Do you want password to include lowercase letters?");
@@ -81,6 +81,11 @@ function generatePassword() {
 
     var randomPW = [];
 
-    
+    for (var i=0; i < length; i++) {
+        var randomSelection = selections[Math.floor(math.random() * selections.length)];
+        randomPW.push(randomSelction);
+    }
+    var passwordString = randomPW.join("");
+
 }
 
