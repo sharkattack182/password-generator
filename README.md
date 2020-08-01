@@ -14,4 +14,13 @@ After this was all done I had to write a for loop that would repeat for the leng
 <p>Like I mentioned earlier, from here most of the heavy lifting was done the queary selector had already been place on the correct id tag and the function had already been called in the event handler. Over all the project was the perfect level of difficulty to not be too overwhelming. I look forward to getting started on my next project soon!
 </p>
 
-<p>below I'll PRovide a quick screen grab of the generator working and pleasse feel free to check out the link to my gitHub for the project <a href = "https://github.com/sharkattack182/password-generator">here.<a></p>
+<p>below I'll Provide a quick screen grab of the generator working and pleasse feel free to check out the link to my gitHub for the project <a href = "https://github.com/sharkattack182/password-generator">here.<a></p>
+
+<p>Image one is the screen as it loads in the browser before any function has been called.</p>
+<img src= "Assets/Capture.PNG" alt= "homepage untouched">
+<p>Image two is an example of the prompt that generates when you press the button. </p>
+<img src= "Assets/Capture2.PNG" alt= "prompt example">
+<p>Image three is an example of one of the four confirm questions the function asks the user.</p>
+<img src= "Assets/Capture3.PNG" alt= "confirm example">
+<p>Finally the last image is of the password generated based of the selections I made earlier.</p>
+<img src= "Assets/Capture4.PNG" alt= "generated password">
