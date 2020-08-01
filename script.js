@@ -69,6 +69,14 @@ function generatePassword() {
         selections = lowercaseOpts.concat(specialOpts);
     }  else if (numbersYN && specialYN) {            //numbers special
         selections = numberOpts.concat(specialOpts);
+    } else if (upperYN) {           //upper only
+        selections = uppercaseOpts;
+    } else if (lowerYN) {          //lower only
+        selections = lowercaseOpts;
+    } else if (specialYN) {     //special only
+        selections = specialOpts;
+    } else if (numbersYN) {     // numbers only
+        selections = numberOpts;
     }
 
 }
