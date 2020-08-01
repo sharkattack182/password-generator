@@ -34,16 +34,19 @@ function generatePassword() {
     length = prompt("Please select a password length between 8 and 128 characters.");
 
     if (!length) {
-        alert("Tis field is required");
+        alert("This field is required");
+        return ""
     } else if (length < 8 || length > 128) {
         alert("Password must be between 8 and 128 characters");
-        length = prompt("Please select a password length between 8 and 128 characters.");
-    } else {
-        upperYN = confirm("Do you want password to include uppercase letters?");
-        lowerYN = confirm("Do you want password to include lowercase letters?");
-        specialYN = confirm("Do you want password to include special characters?");
-        numbersYN = confirm("Do you want password to include uppercase numbers?");
-    };
+        return ""
+    } else if (isNaN(length)) {
+        alert("Please enter a numerical Value");
+        return ""
+    }
+    upperYN = confirm("Do you want password to include uppercase letters?");
+    lowerYN = confirm("Do you want password to include lowercase letters?");
+    specialYN = confirm("Do you want password to include special characters?");
+    numbersYN = confirm("Do you want password to include uppercase numbers?");
 
     if (!upperYN && !lowerYN && !specialYN && !numbersYN) {         //no selctions
         alert("You must choose atleast one character type")
@@ -67,7 +70,7 @@ function generatePassword() {
         selections = lowercaseOpts.concat(numberOpts);
     } else if (lowerYN && specialYN) {            //lower special
         selections = lowercaseOpts.concat(specialOpts);
-    }  else if (numbersYN && specialYN) {            //numbers special
+    } else if (numbersYN && specialYN) {            //numbers special
         selections = numberOpts.concat(specialOpts);
     } else if (upperYN) {           //upper only
         selections = uppercaseOpts;
@@ -81,7 +84,7 @@ function generatePassword() {
 
     var randomPW = [];
 
-    for (var i=0; i < length; i++) {
+    for (var i = 0; i < length; i++) {
         var randomSelection = selections[Math.floor(Math.random() * selections.length)];
         randomPW.push(randomSelection);
     }
@@ -89,4 +92,3 @@ function generatePassword() {
     return passwordString;
 
 }
-
