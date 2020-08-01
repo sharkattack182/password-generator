@@ -19,6 +19,7 @@ var upperYN;
 var lowerYN;
 var specialYN;
 var numbersYN;
+var selections;
 
 //Arrays
 
@@ -32,17 +33,20 @@ var numberOpts = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 function generatePassword() {
     lengthValue = prompt("Please select a password length between 8 and 128 characters.");
     
-    if (lengthValue == null) {
+    if (!lengthValue) {
         alert("Tis field is required");
     } else if (lengthValue < 8 || lengthValue > 128) {
             alert("Password must be between 8 and 128 characters");
             lengthValue = prompt("Please select a password length between 8 and 128 characters.");
-        } else {
+        } 
+        else {
             upperYN = confirm("Do you want password to include uppercase letters?");
-            lowerYN = confirm("Do you want password to include uppercase letters?");
-            specialYN = confirm("Do you want password to include uppercase letters?");
-            numbersYN = confirm("Do you want password to include uppercase letters?");
-        }
-        
+            lowerYN = confirm("Do you want password to include lowercase letters?");
+            specialYN = confirm("Do you want password to include special characters?");
+            numbersYN = confirm("Do you want password to include uppercase numbers?");
+        };
+    if (!upperYN &&!lowerYN && !specialYN && !numbersYN) {
+
+    }
 }
     
