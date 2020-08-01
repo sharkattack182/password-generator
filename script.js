@@ -45,18 +45,30 @@ function generatePassword() {
         numbersYN = confirm("Do you want password to include uppercase numbers?");
     };
 
-    if (!upperYN && !lowerYN && !specialYN && !numbersYN) {       //no selctions
+    if (!upperYN && !lowerYN && !specialYN && !numbersYN) {         //no selctions
         alert("You must choose atleast one character type")
-    } else if (upperYN && lowerYN && specialYN && numbersYN) {       //all selections
+    } else if (upperYN && lowerYN && specialYN && numbersYN) {     //all selections
         selections = lowercaseOpts.concat(uppercaseOpts, specialOpts, numberOpts);
-    } else if (lowerYN && specialYN && numbersYN) {       //lower special and numbers
+    } else if (lowerYN && specialYN && numbersYN) {           //lower special and numbers
         selections = lowercaseOpts.concat(specialOpts, numberOpts);
-    } else if (upperYN && lowerYN && numbersYN) {         //lower upper and numbers
+    } else if (upperYN && lowerYN && numbersYN) {              //lower upper and numbers
         selections = lowercaseOpts.concat(uppercaseOpts, numberOpts);
     } else if (upperYN && lowerYN && specialYN) {     //lower upper and special
         selections = lowercaseOpts.concat(uppercaseOpts, specialOpts);
     } else if (upperYN && lowerYN && specialYN && numbersYN) {       //upper special and numbers
         selections = uppercaseOpts.concat(specialOpts, numberOpts);
+    } else if (upperYN && lowerYN) {                    // upper lower 
+        selections = uppercaseOpts.concat(lowercaseOpts);
+    } else if (upperYN && specialOpts) {        // upper special
+        selections = uppercaseOpts.concat(specialOpts);
+    } else if (upperYN && numbersYN) {            //upper number
+        selections = uppercaseOpts.concat(numberOpts);
+    } else if (lowerYN && numbersYN) {            //lower number
+        selections = lowercaseOpts.concat(numberOpts);
+    } else if (lowerYN && specialYN) {            //lower special
+        selections = lowercaseOpts.concat(specialOpts);
+    }  else if (numbersYN && specialYN) {            //numbers special
+        selections = numberOpts.concat(specialOpts);
     }
 
 }
