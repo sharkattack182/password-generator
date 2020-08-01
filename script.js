@@ -77,7 +77,10 @@ function generatePassword() {
         selections = specialOpts;
     } else if (numbersYN) {     // numbers only
         selections = numberOpts;
-    }
+    };
 
+    var randomPW = [];
+
+    
 }
 
