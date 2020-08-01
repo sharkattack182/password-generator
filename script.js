@@ -35,8 +35,13 @@ function generatePassword() {
     if (lengthValue == null) {
         alert("Tis field is required");
     } else if (lengthValue < 8 || lengthValue > 128) {
-            alert("Password must be between 8 and 128 characters")
+            alert("Password must be between 8 and 128 characters");
             lengthValue = prompt("Please select a password length between 8 and 128 characters.");
+        } else {
+            upperYN = confirm("Do you want password to include uppercase letters?");
+            lowerYN = confirm("Do you want password to include uppercase letters?");
+            specialYN = confirm("Do you want password to include uppercase letters?");
+            numbersYN = confirm("Do you want password to include uppercase letters?");
         }
         
 }
