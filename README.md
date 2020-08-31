@@ -26,4 +26,5 @@ After this was all done I had to write a for loop that would repeat for the leng
 <img src= "Assets/Capture4.PNG" alt= "generated password">
 
 GitHub: https://github.com/sharkattack182/password-generator
+<br>
 Deployed: https://sharkattack182.github.io/password-generator/
