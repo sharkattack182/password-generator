@@ -24,3 +24,6 @@ After this was all done I had to write a for loop that would repeat for the leng
 <img src= "Assets/Capture3.PNG" alt= "confirm example">
 <p>Finally the last image is of the password generated based of the selections I made earlier.</p>
 <img src= "Assets/Capture4.PNG" alt= "generated password">
+
+GitHub: https://github.com/sharkattack182/password-generator
+Deployed: https://sharkattack182.github.io/password-generator/
